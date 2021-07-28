@@ -1,0 +1,87 @@
+.wallet {
+    border: 1px solid transparent;
+    margin-bottom: 83px;
+  }
+  
+  .wLogo {
+    position: absolute;
+    margin-left: -76px;
+    margin-top: -50px;
+  }
+  
+  .curBalance {
+    text-align: center;
+    margin: 7rem 0 3rem 0;
+  }
+  .curBalance h2 {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+  .curBalance h1 {
+    color: #5e9c60;
+    line-height: 36px;
+  }
+  #curency {
+    font-size: 16px;
+    margin-left: 0.5rem;
+  }
+  .walletButtons {
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+  }
+  .walletButtons a {
+    text-decoration: none;
+  }
+  .income {
+    flex: 0 0 174px;
+    min-width: 174px;
+    height: 60px;
+    background-color: rgba(242, 249, 242, 1);
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #5e9c60;
+    font-size: 14px;
+  }
+  .income button {
+    background-color: #d9efd9;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 0.8rem;
+    color: #5e9c60;
+    font-size: 36px;
+  }
+  .expenses {
+    flex: 0 0 174px;
+    min-width: 174px;
+    height: 60px;
+    background-color: #fdecec;
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #e35959;
+    font-size: 14px;
+  }
+  .expenses button {
+    background-color: #f9c4c4;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 0.8rem;
+    color: #e35959;
+    font-size: 36px;
+  }
+ 
+  .history{
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      margin-top: 33.5px
+
+  }
+  .history h3{
+    margin-top: 14px;
+    color:#1C092C
+}

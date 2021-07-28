@@ -1,0 +1,29 @@
+<app-nav-bar></app-nav-bar>
+<div class="expensesScr">
+    <div class="expensesHead">
+        <img src="./assets/icons/arrowBack.png" alt="arrow" routerLink="/" style="cursor: pointer;">
+      <h2>Add an income</h2>
+    </div>
+    <div class="inputForm">
+      <input
+        placeholder="Enter amount here"
+        type="number"
+        #amount
+      >
+      <input
+        placeholder="Enter description"
+        type="text"
+        #desc
+      >
+    </div>
+    <div class="expCategory">
+      <h2>Choose category</h2>
+     <app-category *ngFor="let category of incomeCat" [category]="category"></app-category>
+    </div>
+   
+      <button class="btnGreen" style="overflow: hidden; position: fixed; bottom: 5.7rem; left: 16; width: 90%"
+      (click)="submit(amount.value,desc.value)">
+        Add an income
+      </button>
+  
+  </div>

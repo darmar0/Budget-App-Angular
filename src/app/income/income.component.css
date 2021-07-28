@@ -1,0 +1,72 @@
+.expensesScr {
+    padding: 0.5rem;
+    margin-bottom: 8rem;
+  }
+  .expensesScr h2 {
+    font-size: 16px;
+  }
+  .expensesHead {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5rem;
+    margin-bottom: 2rem;
+  }
+  .expCategory {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .itemCat {
+    height: 51px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+  }
+  .descIcon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .iconCat {
+    margin-left: 10px;
+  }
+  .iconCat img {
+    width: 34px;
+  }
+  .desc {
+    margin-top: 0.5rem;
+  }
+  .desc h2 {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+  .desc h6 {
+    font-size: 12px;
+    line-height: 0px;
+    font-weight: 400;
+    margin-top: -0.05rem;
+  }
+  .inputForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: none;
+  }
+  .inputForm input {
+    border: none;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.38);
+    padding: 0.5rem;
+    margin-top: 2.5rem;
+    font-size: 14px;
+  }
+  .inputForm :focus {
+    outline: none;
+    border-bottom: 2px solid #5e9c60;
+  }
+  

@@ -1,0 +1,30 @@
+<div *ngIf="isLoading" style="text-align: center">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+<div class="logIn" *ngIf="!isLoading">
+    <app-logo></app-logo>
+    <h2>Welcome to Budget App</h2>
+    <h4>Fill in the fields to continue</h4>
+    <p *ngIf="errorMessage">{{errorMessage}}</p>
+    <div class="inputForm">
+      <input placeholder="Username*" type="text" #username>
+      <input placeholder="Password*" type="password" #password>
+      <input placeholder="Name" type="text" *ngIf="!isLoginMode" #firstName>
+      <input placeholder="Last name" type="text" *ngIf="!isLoginMode" #lastname>
+    </div>
+    <div class="left">
+      <h5 id="pass">Forgot password?</h5>
+    </div>
+    <button class="btnGreen" *ngIf="isLoginMode" (click)="onSubmit(username.value, password.value)">
+      Log in
+    </button>
+    <button class="btnGreen" *ngIf="!isLoginMode" (click)="onSubmit(username.value, password.value)">
+      Register
+    </button>
+    <h5 *ngIf="isLoginMode" >
+      Don’t have an account? <span id="reg" (click)="onSwitchMode()">Register</span>
+    </h5>
+    <h5 *ngIf="!isLoginMode">
+      Already have an account? <span id="reg" (click)="onSwitchMode()">Log in</span>
+    </h5>
+  </div>

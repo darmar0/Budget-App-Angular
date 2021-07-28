@@ -1,0 +1,28 @@
+<app-nav-bar></app-nav-bar>
+<div class="wallet" >
+  <div class="wLogo" >
+    <app-logo></app-logo>
+  </div>
+  <div class="curBalance">
+    <h2>Current Balance</h2>
+    <h1 >{{transactions.balance | number}}<span id="curency">RSD</span></h1>
+  </div>
+  <div class="walletButtons">
+    <div class="income">
+      Add an income
+      <button routerLink="/income">+</button>
+    </div>
+    <div class="expenses">
+      Add an expense
+      <button routerLink="/expense">+</button>
+    </div>
+  </div>
+
+  <div class="history">
+    <p>History</p>
+   
+    <app-history  *ngFor="let historyItem of history" [history]="historyItem" [outcome]="outcome" [income]="income"></app-history>  </div>
+    
+    
+  
+</div>

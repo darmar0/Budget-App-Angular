@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+body {
+    font-family: "Lato", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  .btnGreen {
+    width: 100%;
+    background-color: #5e9c60;
+    border: none;
+    height: 46px;
+    border-radius: 0.7rem;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .btnGreen:focus {
+    background-color: #7ebe80;
+    outline: 0 !important;
+    border: 0px solid transparent !important;
+  }
+  

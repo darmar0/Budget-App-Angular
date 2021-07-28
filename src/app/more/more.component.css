@@ -1,0 +1,17 @@
+.moreScr img {
+    width: 99.5%;
+    text-align: center;
+    margin-top: 30%;
+  }
+  .moreScr h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 76px;
+    text-align: center;
+  }
+  .moreScr p {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+  }
+ 

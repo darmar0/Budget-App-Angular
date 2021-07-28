@@ -1,0 +1,35 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 83px;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    -webkit-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.04);
+    -moz-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.04);
+    box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.04);
+    background-color: white;
+  }
+  .nav a {
+    text-decoration: none;
+    color: #000000;
+  }
+  .nav p {
+    font-size: 10px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .navItem {
+    text-align: center;
+    padding: 0 3rem 0 3rem;
+  }
+  .active{
+    color: #5E9C60
+  }
+  .inactive{
+    color:black
+  }

@@ -1,0 +1,48 @@
+.logo-container {
+    width: 192px;
+    height: 192px;
+    overflow: hidden;
+    padding: 0.5rem;
+  }
+  .element1Container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 5px;
+  }
+  .element2Container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: -0.5px;
+  }
+  .element1 {
+    flex: 0 0 76px;
+    height: 90px;
+    overflow: hidden;
+    position: relative;
+  }
+  .element2 {
+    flex: 0 0 76px;
+    height: 90px;
+    overflow: hidden;
+    position: relative;
+  }
+  .elementRect {
+    width: 100px;
+    height: 60px;
+    margin: 23px 0 0 3px;
+    background: #e3f3e3;
+    transform: rotate(-35deg);
+  }
+  .elementTri {
+    position: absolute;
+    width: 100px;
+    height: 90px;
+    top: 62px;
+    left: -60px;
+    background: #5e9c60;
+    transform: rotate(-55.5deg);
+  }

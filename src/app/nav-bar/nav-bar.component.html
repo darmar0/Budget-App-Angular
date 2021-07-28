@@ -1,0 +1,21 @@
+<div class="nav">
+      <a class="navItem" routerLink=""  [routerLinkActive]="'active'"  #rla1="routerLinkActive" [routerLinkActiveOptions]="{exact: true}"> 
+        <img [src]="rla1.isActive? walletG : wallet" alt="wallet">
+        <p  [ngStyle]="{'color': (rla1.isActive) ? '#5E9C60' : 'black'}">Wallet</p>
+      </a>
+    
+   
+      <a class="navItem" routerLink="/stats"  routerLinkActive="active" #rla2="routerLinkActive" >
+        <img [src]="rla2.isActive? statsG : stats"
+        alt="stats">
+        <p [ngStyle]="{'color': (rla2.isActive) ? '#5E9C60' : 'black'}">Stats</p>
+      </a>
+    
+ 
+      <a class="navItem" routerLink="/more" routerLinkActive="active"  #rla3="routerLinkActive" > 
+        <img [src]="rla3.isActive? moreG : more"
+        alt="more">
+        <p [ngStyle]="{'color': (rla3.isActive) ? '#5E9C60' : 'black'}">More</p>
+      </a>
+    
+  </div>

@@ -1,0 +1,28 @@
+<div class="itemCat">
+  <div class="descIcon">
+    <div class="iconCat">
+      <img
+        src="https://budgetapp.digitalcube.rs/assets/icons/categories/{{
+          category.icon_png
+        }}"
+        alt="test"
+      />
+    </div>
+    <div class="desc">
+      <h2>{{ category.name }}</h2>
+      <h6>{{ category.description }}</h6>
+    </div>
+  </div>
+  <div class="radioBtn">
+    <label>
+      <input
+        value="{{ category.id }}"
+        type="radio"
+        name="radio"
+        #cat
+        (click)="checked(cat.value)"
+      />
+      <span class="checkmark"></span>
+    </label>
+  </div>
+</div>

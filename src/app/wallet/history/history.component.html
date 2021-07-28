@@ -1,0 +1,19 @@
+<div class="item">
+    <div class="dateIcon">
+      <div class="date">
+        <h2>{{history.created | dateShorten:"date"}}</h2>
+        <h6 style="color:rgba(0, 0, 0, 0.55)">{{history.created | dateShorten:"month"}}</h6>
+      </div>
+      <div class="icon">
+        <img src="https://budgetapp.digitalcube.rs/assets/icons/categories/{{history.icon_png}}" alt="test">
+    </div>
+</div>
+    <div class="amount">
+      <h5>{{history.category | cat: income:outcome}}</h5>
+      <h2>
+        {{history.amount | number}}
+        <span style=" color: rgba(0, 0, 0, 0.55)">RSD</span>
+      </h2>
+    </div>
+ 
+

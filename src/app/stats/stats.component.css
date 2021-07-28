@@ -1,0 +1,155 @@
+.stats {
+  border: 1px solid transparent;
+  margin-bottom: 83px;
+}
+.wLogo {
+    position: absolute;
+    margin-left: -76px;
+    margin-top: -50px;
+  }
+  .statsMonth{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28px;
+  }
+  #year{
+    color:rgba(0, 0, 0, 0.6)
+
+  }
+  .statsMonth h1{
+    color:rgba(16, 16, 16, 0.85);
+    font-size: 28px;
+  }
+  .arrMargin{
+   margin-left: 4rem;
+  }
+  .totalStats{
+    text-align: center;
+    margin-top: 46px;
+  }
+  .totalStats h3{
+   font-size: 14px;
+  }
+  .totalStats h1{
+    font-size: 30px;
+    color: #5E9C60
+
+   }
+   #curency {
+    font-size: 12px;
+    margin-left: 0.5rem;
+  }
+  #curencySt {
+    font-size: 12px;
+    margin-left: 0.5rem;
+  }
+  .expInc{
+    text-align: center;
+    margin-top: 44px;
+   
+  }
+
+  .expBox{
+    background-color:#F5F5F5;
+    border-radius:10px; 
+    min-height: 68px;
+    
+  }
+  .incBox{
+    background-color:rgba(127, 196, 129, 0.14);
+    border-radius:10px; 
+    min-height: 68px;
+  }
+
+  .incBox h3{
+  font-size: 12px;
+  font-weight: 400;
+  color:#5E9C60;
+  padding-top:1.2rem;
+  line-height: 0;
+
+  }
+  .incBox h1{
+    font-size: 20px;
+    font-weight: 600;
+    color:#5E9C60
+  }
+  .expBox h3{
+    font-size: 12px;
+    font-weight: 400;
+    color:rgba(16, 16, 16, 0.85);
+    padding-top:1.2rem;
+    line-height: 0;
+
+    }
+    .expBox h1{
+      font-size: 20px;
+      font-weight: 600;
+      color:rgba(16, 16, 16, 0.85)
+    }
+
+  .statsSpend{
+    margin-top:40px;
+    
+  }
+
+    .statsSpend h3{ 
+     font-size: 14px;
+     font-weight: 400;
+  
+    }
+
+    .spent-slider{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      overflow: hidden;    
+      scroll-behavior: smooth;
+      margin: 0 0.5rem 0 0.5rem;
+      gap: 0.5rem;
+      
+    
+    }
+
+    .arrows{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin:1rem 4.5rem 0rem 0;
+      padding:0
+    }
+
+.spentBox{
+  flex: 0 0 88px;
+  background-color: rgba(250, 250, 250, 1);
+  border-radius: 70px;
+  width: 84px;
+  height: 147px;
+  text-align: center;
+}
+    .spentBox h3{
+      font-size: 11px;
+      font-weight: 400;
+      padding-top:13.5px;
+      line-height:25px;
+      color: rgba(0, 0, 0, 0.6)
+
+    }
+    .spentBox h2{
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 12px;
+    }
+    .spentBox h4{
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 0;
+      color: rgba(0, 0, 0, 0.6)
+
+    }
+    .spentBox img{
+      width: 30px;
+      margin-top: 1rem;
+    }
