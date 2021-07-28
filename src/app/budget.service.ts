@@ -48,9 +48,12 @@ if(jwt){
  }
 sharedData(cat:string){
   this.data = cat
-  console.log(this.data)
 }
 sharedToData(){
  return this.data
+}
+fetch(month:any){
+  const tk = this.get("user")
+  return this.http.get('https://budgetapp.digitalcube.rs/api/transactions/statistics?year=2021&month='+month,{headers: new HttpHeaders({'Authorization': 'Bearer ' + tk})})
 }
 }

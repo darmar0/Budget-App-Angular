@@ -24,13 +24,10 @@ export class AuthComponent {
         this.isLoading = true
    if(this.isLoginMode){
 this.service.login(username,password).subscribe(res=>{
-    console.log(res)
     this.router.navigate(["/"])
     this.isLoading = false
 },
 errorRes =>{
-    console.log(errorRes)
-    
     switch (errorRes.error.message){
         case "": this.errorMessage = "Error occured"
     }
@@ -39,12 +36,10 @@ errorRes =>{
 )
    }else{
     this.service.createAccount(username,password).subscribe(res=>{
-        console.log(res)
         this.isLoading = false
+        this.isLoginMode = true
     },
     errorRes =>{
-        console.log(errorRes)
-        
         switch (errorRes.error.message){
             case "": this.errorMessage = "Error occured"
         }

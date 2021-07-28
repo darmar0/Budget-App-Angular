@@ -1,3 +1,4 @@
+import { AuthGuard } from './auth-guard.service';
 import { MoreComponent } from './more/more.component';
 import { StatsComponent } from './stats/stats.component';
 import { ExpenseComponent } from './expense/expense.component';
@@ -9,7 +10,7 @@ import { NgModule } from "@angular/core";
 
 
 const routes : Routes = [
-    {path: "", component: WalletComponent},
+    {path: "", component: WalletComponent,  canActivate: [AuthGuard], },
     {path: "auth", component: AuthComponent},
     {path: "income", component: IncomeComponent},
     {path: "expense", component: ExpenseComponent},

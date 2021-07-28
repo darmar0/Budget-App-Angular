@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { BudgetService } from './../budget.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, DoCheck } from '@angular/core';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './expense.component.html',
   styleUrls: ['./expense.component.css']
 })
-export class ExpenseComponent implements OnInit {
+export class ExpenseComponent implements OnInit, DoCheck {
 
   outcomeCat : any
  
@@ -30,5 +30,5 @@ ngOnInit(): void {
   })
  
 }
-
+ngDoCheck(){this.outcomeCat}
 }
