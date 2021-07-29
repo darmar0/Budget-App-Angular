@@ -16,10 +16,13 @@ export class ExpenseComponent implements OnInit, DoCheck {
 constructor(private service : BudgetService, private router: Router) { }
 
 onSubmit(amount: any, desc: string){
+  if(amount && desc){
+
+  
 this.service.newTransaction(amount,desc);
-if(amount && desc){
+
   this.router.navigate([""])
-}
+ }
 }
 
 

@@ -15,8 +15,8 @@ incomeCat : any
   constructor(private service : BudgetService, private router: Router) { }
 
 submit(amount:any, desc: string){
-  this.service.newTransaction(amount,desc)
   if(amount && desc){
+  this.service.newTransaction(amount,desc)
     this.router.navigate([""])
   }
   

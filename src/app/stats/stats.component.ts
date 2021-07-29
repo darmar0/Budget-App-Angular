@@ -1,5 +1,5 @@
 import { BudgetService } from './../budget.service';
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 
 
@@ -9,7 +9,7 @@ import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/co
   templateUrl: './stats.component.html',
   styleUrls: ['./stats.component.css']
 })
-export class StatsComponent implements OnInit, OnDestroy{
+export class StatsComponent implements OnInit{
   @ViewChild('widgetsContent') widgetsContent: any = ElementRef;
 
 stats: any = {}
@@ -62,10 +62,7 @@ monthNames: any = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Se
      
     }
 
-    ngOnDestroy(){
-      this.stats = null
-      this.cat = null
-    }
+  
    }
 
 

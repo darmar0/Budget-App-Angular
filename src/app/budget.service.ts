@@ -38,7 +38,6 @@ if(jwt){
  newTransaction(amount: any, description: string){
   const tk = this.get("user")
   let payload = {"amount": parseInt(amount), "category": this.data, "currency": "RSD", "description": description}
-  console.log(payload)
   return this.http.post("https://budgetapp.digitalcube.rs/api/transactions",payload,{headers: new HttpHeaders({'Authorization': 'Bearer ' + tk})}).subscribe((res:any)=>{
     console.log(res)
   },
