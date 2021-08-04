@@ -1,49 +1,52 @@
-import { Subject, throwError } from 'rxjs';
-import { tap, catchError } from 'rxjs/operators';
-import { User } from './user.model';
+import { tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core'
+import { Injectable } from '@angular/core';
 
-
- 
-@Injectable({providedIn:"root"})
+@Injectable({ providedIn: 'root' })
 export class AuthService {
+  user: object;
+  token: string;
+  tenat: string = '4db498e8-c92c-4325-89a5-013110d3687f';
+  apiDg: string = 'https://budgetapp.digitalcube.rs/api/tenants/';
 
-    user = new Subject<User>()
-    token : any
+  constructor(private http: HttpClient) {}
 
-constructor(private http: HttpClient){}
-
-get(key: string) {
-    let jwt = localStorage.getItem(key)
-    if(jwt){
-     return  JSON.parse(jwt).token
-    } 
+  get(key: string) {
+    let jwt = localStorage.getItem(key);
+    if (jwt) {
+      return JSON.parse(jwt).token;
     }
+  }
 
-createAccount(username: string, password: string){
-return this.http.post("https://budgetapp.digitalcube.rs/api/tenants/4db498e8-c92c-4325-89a5-013110d3687f/users", {
-    username: username,
-    password: password
-}
-).pipe(tap(res=>{
-    localStorage.setItem("user", JSON.stringify(res))
-}))
-}
-
-login(username:string, password: string){
-   return this.http.post("https://budgetapp.digitalcube.rs/api/tenants/4db498e8-c92c-4325-89a5-013110d3687f/sessions",{
+  createAccount(username: string, password: string) {
+    return this.http
+      .post(this.apiDg + this.tenat + '/users', {
         username: username,
-        password: password
-    }).pipe(tap(res=>{
-        localStorage.setItem("user", JSON.stringify(res))
-    }))
-}
-logout(){
-    const tk = this.get("user")
-    return this.http.delete("https://budgetapp.digitalcube.rs/api/tenants/4db498e8-c92c-4325-89a5-013110d3687f/sessions",
-    {headers: new HttpHeaders({'Authorization': 'Bearer ' + tk})})
-  
-}
+        password: password,
+      })
+      .pipe(
+        tap((res) => {
+          localStorage.setItem('user', JSON.stringify(res));
+        })
+      );
+  }
 
+  login(username: string, password: string) {
+    return this.http
+      .post(this.apiDg + this.tenat + '/sessions', {
+        username: username,
+        password: password,
+      })
+      .pipe(
+        tap((res) => {
+          localStorage.setItem('user', JSON.stringify(res));
+        })
+      );
+  }
+  logout() {
+    const tk = this.get('user');
+    return this.http.delete(this.apiDg + this.tenat + '/sessions', {
+      headers: new HttpHeaders({ Authorization: 'Bearer ' + tk }),
+    });
+  }
 }

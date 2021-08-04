@@ -1,38 +1,36 @@
 .itemCat {
-    height: 51px;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-   
-   
-  }
-  .descIcon {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-  }
-  .iconCat {
-    margin-left: 10px;
-  }
-  .iconCat img {
-    width: 34px;
-  }
-  .desc {
-    margin-top: 0.5rem;
-  }
-  .desc h2 {
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 400;
-  }
-  .desc h6 {
-    font-size: 12px;
-    line-height: 0px;
-    font-weight: 400;
-    margin-top: -0.05rem;
-  }
+  height: 51px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+.descIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.iconCat {
+  margin-left: 10px;
+}
+.iconCat img {
+  width: 34px;
+}
+.desc {
+  margin-top: 0.5rem;
+}
+.desc h2 {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.desc h6 {
+  font-size: 12px;
+  line-height: 0px;
+  font-weight: 400;
+  margin-top: -0.05rem;
+}
 
-  .radioBtn{
-    margin: 14px 10px 0 0;
-  }
+.radioBtn {
+  margin: 14px 10px 0 0;
+}

@@ -1,11 +1,11 @@
 <app-nav-bar></app-nav-bar>
-<div class="wallet" >
-  <div class="wLogo" >
+<div class="wallet">
+  <div class="wLogo">
     <app-logo></app-logo>
   </div>
   <div class="curBalance">
     <h2>Current Balance</h2>
-    <h1 >{{transactions.balance | number}}<span id="curency">RSD</span></h1>
+    <h1>{{ transactions.balance | number }}<span id="curency">RSD</span></h1>
   </div>
   <div class="walletButtons">
     <div class="income">
@@ -20,9 +20,12 @@
 
   <div class="history">
     <p>History</p>
-   
-    <app-history  *ngFor="let historyItem of history" [history]="historyItem" [outcome]="outcome" [income]="income"></app-history>  </div>
-    
-    
-  
+
+    <app-history
+      *ngFor="let historyItem of history"
+      [history]="historyItem"
+      [outcome]="outcome"
+      [income]="income"
+    ></app-history>
+  </div>
 </div>

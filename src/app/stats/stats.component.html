@@ -1,51 +1,83 @@
 <app-nav-bar></app-nav-bar>
 <div class="stats">
-    <div class="wLogo">
-        <app-logo></app-logo>
-      </div>
-      <div class="statsMonth">
-          <h1>{{monthNames[month-1]}} <span id="year">{{year}}</span></h1>
-          <div clas="arrows">
-          <img  src="./assets/icons/arrowBack.png" alt="arrow" style="cursor: pointer;" (click)="monthForward()" > 
-          <img src="./assets/icons/arrowBack.png" class="arrMargin"alt="arrow" style="cursor: pointer; -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);" (click)="monthBack()">
-          </div>
-      </div>
-      <div class="totalStats">
-        <h3>Total in {{monthNames[month-1]}}</h3>
-        <h1>{{stats.outcome + stats.income | number }}<span id="curency">RSD</span></h1>
-      </div>
-      <div class="expInc" >
-          <div class="expBox">
-           <h3>Expenses</h3>
-           <h1>{{stats.outcome | number}}<span id="curencySt">RSD</span></h1>
-          </div>
-          <div class="incBox">
-            <h3>Income</h3>
-            <h1>{{stats.income | number}}<span id="curencySt">RSD</span></h1>
+  <div class="wLogo">
+    <app-logo></app-logo>
+  </div>
+  <div class="statsMonth">
+    <h1>
+      {{ monthNames[month - 1] }} <span id="year">{{ year }}</span>
+    </h1>
+    <div clas="arrows">
+      <img
+        src="./assets/icons/arrowBack.png"
+        alt="arrow"
+        style="cursor: pointer"
+        (click)="monthForward()"
+      />
+      <img
+        src="./assets/icons/arrowBack.png"
+        class="arrMargin"
+        alt="arrow"
+        style="
+          cursor: pointer;
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+        "
+        (click)="monthBack()"
+      />
+    </div>
+  </div>
+  <div class="totalStats">
+    <h3>Total in {{ monthNames[month - 1] }}</h3>
+    <h1>
+      {{ stats.outcome + stats.income | number }}<span id="curency">RSD</span>
+    </h1>
+  </div>
+  <div class="expInc">
+    <div class="expBox">
+      <h3>Expenses</h3>
+      <h1>{{ stats.outcome | number }}<span id="curencySt">RSD</span></h1>
+    </div>
+    <div class="incBox">
+      <h3>Income</h3>
+      <h1>{{ stats.income | number }}<span id="curencySt">RSD</span></h1>
+    </div>
+  </div>
+  <div class="statsSpend">
+    <div class="arrows">
+      <img
+        src="./assets/icons/arrowBack.png"
+        class="arrMargin"
+        alt="arrow"
+        style="cursor: pointer"
+        (click)="scrollLeft()"
+      />
+      <h3>Most spent on</h3>
+      <img
+        src="./assets/icons/arrowBack.png"
+        alt="arrow"
+        style="
+          cursor: pointer;
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+        "
+        (click)="scrollRight()"
+      />
+    </div>
+    <div #widgetsContent class="spent-slider">
+      <div class="spentCat" *ngFor="let statItem of cat">
+        <div class="spentBox">
+          <h3>{{ statItem.category_name }}</h3>
+          <h2>{{ statItem.amount | number }}</h2>
+          <h4>RSD</h4>
+          <img
+            src="https://budgetapp.digitalcube.rs/assets/icons/categories/{{
+              statItem.category_icon
+            }}"
+            alt="{{ statItem.category_name }}"
+          />
         </div>
       </div>
-      <div class="statsSpend">
-      <div class="arrows">
-        <img src="./assets/icons/arrowBack.png" class="arrMargin"alt="arrow" style="cursor: pointer;" (click)="scrollLeft()">
-        <h3>Most spent on</h3>
-        <img src="./assets/icons/arrowBack.png" alt="arrow"  style="cursor: pointer; -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);"  (click)="scrollRight()">
-  </div>   
-      <div #widgetsContent class="spent-slider">
-          <div class="spentCat" *ngFor="let statItem of cat">
-              <div class="spentBox">
-                  <h3>{{statItem.category_name}}</h3>
-                  <h2>{{statItem.amount | number}}</h2>
-                  <h4>RSD</h4>
-                  <img src="https://budgetapp.digitalcube.rs/assets/icons/categories/{{statItem.category_icon}}" alt={{statItem.category_name}}>
-              </div>
-
-          </div>
-      </div>
-     
     </div>
-      
+  </div>
 </div>
-
-

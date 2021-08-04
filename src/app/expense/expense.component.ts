@@ -2,36 +2,30 @@ import { Router } from '@angular/router';
 import { BudgetService } from './../budget.service';
 import { Component, Input, OnInit, DoCheck } from '@angular/core';
 
-
 @Component({
   selector: 'app-expense',
   templateUrl: './expense.component.html',
-  styleUrls: ['./expense.component.css']
+  styleUrls: ['./expense.component.css'],
 })
 export class ExpenseComponent implements OnInit, DoCheck {
+  outcomeCat: object;
 
-  outcomeCat : any
- 
+  constructor(private service: BudgetService, private router: Router) {}
 
-constructor(private service : BudgetService, private router: Router) { }
+  onSubmit(amount: any, desc: string) {
+    if (amount && desc) {
+      this.service.newTransaction(amount, desc);
 
-onSubmit(amount: any, desc: string){
-  if(amount && desc){
+      this.router.navigate(['']);
+    }
+  }
 
-  
-this.service.newTransaction(amount,desc);
-
-  this.router.navigate([""])
- }
-}
-
-
-ngOnInit(): void {
-  this.service.getOutcome().subscribe((res:any)=>{
-    this.outcomeCat = res
-    
-  })
- 
-}
-ngDoCheck(){this.outcomeCat}
+  ngOnInit(): void {
+    this.service.getOutcome().subscribe((res: object) => {
+      this.outcomeCat = res;
+    });
+  }
+  ngDoCheck() {
+    this.outcomeCat;
+  }
 }
